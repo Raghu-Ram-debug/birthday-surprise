@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Birthday gift</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="hero-particles">
+
+  <span>✨</span>
+  <span>💖</span>
+  <span>🌸</span>
+  <span>✨</span>
+  <span>💫</span>
+
+</div>
+  <!-- Hidden Surprise Button -->
+  <button class="secret-btn" id="secret-btn" aria-label="Secret surprise button">💝</button>
+
+  <!-- Surprise Modal -->
+  <div class="surprise-modal" id="surprise-modal">
+    <button class="surprise-close" id="surprise-close">
+  ✕
+</button>
+    <div class="confetti-container"></div>
+    <div class="surprise-modal__overlay"></div>
+    <div class="surprise-modal__content">
+      <button class="surprise-modal__close" id="modal-close">&times;</button>
+<div class="surprise-modal__inner">
+
+  <p class="surprise-modal__emoji">💝</p>
+
+  <div class="modal-gallery">
+    <img src="assets/IMG_20260514_134538_506[1].jpg"
+         class="modal-image"
+         alt="Beautiful memory">
+
+    <img src="assets/IMG_20260514_134557_190[1].jpg"
+         class="modal-image"
+         alt="Special memory">
+  </div>
+
+  <h2 class="surprise-modal__title">
+    Okay... one last thing
+  </h2>
+
+  <p class="surprise-modal__message">
+    No matter how hard life gets,
+    I hope you never forget how genuinely valued you are.
+    And I hope today made you smile at least a little.
+    I am there for you always :)
+  </p>
+
+  <p class="surprise-modal__footer">
+    ✨ Happy Birthday 🥳 ✨
+  </p>
+
+</div>
+    </div>
+  </div>
+  <div id="password-screen">
+  <div class="password-box">
+<h2>Enter The Password ✨</h2>
+<p class="hint">Hint: Favorite color.</p>
+
+    <input type="password" id="password-input" placeholder="password">
+
+    <button onclick="checkPassword()">Enter</button>
+  </div>
+</div>
+
+  <!-- Surprise Particles Container -->
+  <div class="surprise-particles" id="surprise-particles"></div>
+
+  <section class="hero">
+    <div class="hero__content">
+      <p class="hero__eyebrow">For someone special</p>
+      <h1 class="hero__title">
+        <span>I Made This</span>
+        <span>For You</span>
+      </h1>
+      <p class="hero__subtitle">
+        I didn’t want to just send a normal birthday message. So… I made this instead.
+      </p>
+      <a href="#explore" class="hero__button">Open Your Surprise</a>
+    </div>
+  </section>
+
+  <section id="explore" class="letter-section">
+    <div class="letter-container">
+      <div class="envelope" id="envelope">
+        <div class="envelope__flap"></div>
+        <div class="envelope__body">
+          <div class="envelope__front">
+            <p class="envelope__text">Open Letter</p>
+          </div>
+        </div>
+        <div class="envelope__shadow"></div>
+      </div>
+      
+      <div class="letter" id="letter">
+        <div class="letter__content">
+          <p class="letter__greeting">Hey You :) </p>
+           <p class="letter__message">
+I honestly didn’t know how to make something like this at first,
+but I wanted your birthday to feel a little different this year.
+
+You’re one of those people who somehow make things feel lighter without even trying.
+And I don’t think you realize how much people appreciate your presence.
+
+So this tiny website is basically my way of saying:
+thank you for being you.
+
+I hope this year brings you more peace, more happiness,
+and more moments that make you genuinely smile.
+
+And yeah…
+happy birthday :)
+</p>
+          <p class="letter__closing">Made with care and love....</p>
+          <p class="letter__signature">your pata nahi 😅</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gift-section">
+    <div class="gift-container">
+      <h2 class="gift-title">A Small Surprise</h2>
+      
+      <div class="giftbox" id="giftbox">
+        <div class="gift-sparkles">
+  <span>✨</span>
+  <span>💖</span>
+  <span>🌸</span>
+  <span>🎀</span>
+  <span>😽</span>
+</div>
+        <div class="giftbox__wrapper">
+          <div class="giftbox__body"></div>
+          <div class="giftbox__ribbon"></div>
+          <div class="giftbox__lid" id="giftbox-lid"></div>
+          <div class="giftbox__bow"></div>
+        </div>
+      </div>
+      
+<div class="gift-message" id="surprise">
+  <img src="assets/IMG_20260514_134604_908[1].jpg" class="gift-photo">
+
+  <h3>Happy Birthday ✨</h3>
+
+  <p>
+    I just wanted this day to feel special for you.
+    You deserve happiness, peace, and beautiful moments always :)
+  </p>
+</div>
+      
+      <div class="particles" id="particles"></div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
