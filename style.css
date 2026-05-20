@@ -783,11 +783,12 @@ body::after {
 @keyframes letterUnfold {
   0% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.88) rotateX(-10deg);
+    transform: scale(0.88) rotateX(-10deg);
   }
+
   100% {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1) rotateX(0deg);
+    transform: scale(1) rotateX(0deg);
   }
 }
 
@@ -1266,8 +1267,8 @@ body::after {
   .letter {
     position: relative;
     top: auto;
-    left: auto;
-    transform: none;
+    left: unset;
+    transform: none !important; 
     width: min(100%, 92vw);
     max-width: 340px;
     margin: 0 auto;
