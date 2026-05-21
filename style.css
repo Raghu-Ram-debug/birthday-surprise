@@ -1342,42 +1342,23 @@ body::after {
 
 .memory-video {
 
-  width: 280px !important;
+  width: 180px;
 
-  height: 170px !important;
+  height: 300px;
 
-  max-width: 280px !important;
+  object-fit: cover;
 
-  min-width: 280px !important;
-
-  max-height: 170px !important;
-
-  object-fit: cover !important;
-
-  object-position: center !important;
-
-  border-radius: 18px;
-
-  overflow: hidden;
+  border-radius: 20px;
 
   display: block;
 
-  margin: 0 auto 16px auto;
+  margin: 0 auto 18px auto;
 
-  background: black;
+  border: 1px solid rgba(255,255,255,0.12);
 
   box-shadow:
     0 10px 30px rgba(0,0,0,0.4),
-    0 0 20px rgba(245,199,66,0.08);
-}
-
-.memory-video video {
-
-  width: 100% !important;
-
-  height: 100% !important;
-
-  object-fit: cover !important;
+    0 0 18px rgba(245,199,66,0.08);
 }
 
   .surprise {
