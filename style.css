@@ -1340,6 +1340,46 @@ body::after {
     animation: giftboxFloat 3.4s ease-in-out infinite;
   }
 
+.memory-video {
+
+  width: 280px !important;
+
+  height: 170px !important;
+
+  max-width: 280px !important;
+
+  min-width: 280px !important;
+
+  max-height: 170px !important;
+
+  object-fit: cover !important;
+
+  object-position: center !important;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  display: block;
+
+  margin: 0 auto 16px auto;
+
+  background: black;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.4),
+    0 0 20px rgba(245,199,66,0.08);
+}
+
+.memory-video video {
+
+  width: 100% !important;
+
+  height: 100% !important;
+
+  object-fit: cover !important;
+}
+
   .surprise {
     width: min(90vw, 260px);
     top: 52%;
