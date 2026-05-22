@@ -175,3 +175,17 @@ function createConfetti() {
     }, 5000);
   }
 }
+
+document.body.addEventListener("click", () => {
+
+  const music = document.getElementById("bgMusic");
+
+  if (music) {
+
+    music.volume = 0.12;
+
+    music.play();
+
+  }
+
+}, { once: true });
