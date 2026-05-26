@@ -146,6 +146,23 @@ function checkPassword() {
     .trim();
   if (password === "blue") {
     document.getElementById("password-screen").style.display = "none";
+    const typewriter = document.querySelector(".typewriter");
+
+if (typewriter) {
+
+  typewriter.classList.add("start");
+
+}
+
+const music = document.getElementById("bgMusic");
+
+if (music) {
+
+  music.volume = 0.08;
+
+  music.play();
+
+}
   } else {
     alert("Wrong !!!! Try again.");
   }
@@ -175,17 +192,3 @@ function createConfetti() {
     }, 5000);
   }
 }
-
-document.body.addEventListener("click", () => {
-
-  const music = document.getElementById("bgMusic");
-
-  if (music) {
-
-    music.volume = 0.12;
-
-    music.play();
-
-  }
-
-}, { once: true });

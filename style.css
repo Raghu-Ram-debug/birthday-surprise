@@ -68,6 +68,92 @@ body::after {
   z-index: 1;
 }
 
+.gold-dust {
+
+  position: fixed;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.gold-dust span {
+
+  position: absolute;
+
+  top: -20px;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background:
+  radial-gradient(circle,
+    rgba(255, 230, 150, 1) 0%,
+    rgba(245, 199, 66, 0.95) 40%,
+    rgba(245, 199, 66, 0.15) 100%);
+
+  filter: blur(1px);
+
+box-shadow:
+  0 0 10px rgba(245,199,66,0.9),
+  0 0 20px rgba(245,199,66,0.45),
+  0 0 35px rgba(245,199,66,0.2);
+
+  animation: dustFall linear infinite;
+}
+
+.gold-dust span:nth-child(1)  { left: 5%;  animation-duration: 7s; animation-delay: 0s; }
+.gold-dust span:nth-child(2)  { left: 12%; animation-duration: 9s; animation-delay: 1s; }
+.gold-dust span:nth-child(3)  { left: 18%; animation-duration: 8s; animation-delay: 2s; }
+.gold-dust span:nth-child(4)  { left: 26%; animation-duration: 10s; animation-delay: 1s; }
+.gold-dust span:nth-child(5)  { left: 33%; animation-duration: 7s; animation-delay: 3s; }
+.gold-dust span:nth-child(6)  { left: 40%; animation-duration: 11s; animation-delay: 2s; }
+.gold-dust span:nth-child(7)  { left: 48%; animation-duration: 8s; animation-delay: 4s; }
+.gold-dust span:nth-child(8)  { left: 56%; animation-duration: 9s; animation-delay: 1s; }
+.gold-dust span:nth-child(9)  { left: 63%; animation-duration: 7s; animation-delay: 5s; }
+.gold-dust span:nth-child(10) { left: 70%; animation-duration: 10s; animation-delay: 3s; }
+.gold-dust span:nth-child(11) { left: 76%; animation-duration: 8s; animation-delay: 2s; }
+.gold-dust span:nth-child(12) { left: 82%; animation-duration: 9s; animation-delay: 4s; }
+.gold-dust span:nth-child(13) { left: 88%; animation-duration: 7s; animation-delay: 1s; }
+.gold-dust span:nth-child(14) { left: 94%; animation-duration: 11s; animation-delay: 5s; }
+.gold-dust span:nth-child(15) { left: 15%; animation-duration: 8s; animation-delay: 6s; }
+.gold-dust span:nth-child(16) { left: 28%; animation-duration: 9s; animation-delay: 2s; }
+.gold-dust span:nth-child(17) { left: 46%; animation-duration: 7s; animation-delay: 4s; }
+.gold-dust span:nth-child(18) { left: 61%; animation-duration: 10s; animation-delay: 1s; }
+.gold-dust span:nth-child(19) { left: 79%; animation-duration: 8s; animation-delay: 3s; }
+.gold-dust span:nth-child(20) { left: 91%; animation-duration: 9s; animation-delay: 5s; }
+
+@keyframes dustFall {
+
+  0% {
+
+    transform:
+      translateY(-10vh)
+      translateX(0px);
+
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.5;
+  }
+
+  100% {
+
+    transform:
+      translateY(110vh)
+      translateX(20px);
+
+    opacity: 0;
+  }
+}
+
 /* ============================================
    UNIFIED ANIMATIONS
    ============================================ */
@@ -146,7 +232,9 @@ body::after {
 
   font-size: 22px;
 
-  opacity: 0.8;
+  opacity: 1;
+
+  filter: drop-shadow(0 0 8px rgba(245,199,66,0.6));
 
   animation: floatHero 6s ease-in-out infinite;
 }
@@ -154,34 +242,30 @@ body::after {
 /* Positions */
 
 .hero-particles span:nth-child(1) {
-  top: 18%;
-  left: 22%;
-  animation-delay: 0s;
+  top: 8%;
+  left: 14%;
 }
 
 .hero-particles span:nth-child(2) {
-  top: 30%;
-  right: 18%;
-  animation-delay: 1s;
+  top: 12%;
+  left: 78%;
 }
 
 .hero-particles span:nth-child(3) {
-  bottom: 25%;
-  left: 15%;
-  animation-delay: 2s;
+  top: 79%;
+  left: 22%;
 }
 
 .hero-particles span:nth-child(4) {
-  bottom: 18%;
-  right: 20%;
-  animation-delay: 3s;
+  top: 77%;
+  left: 82%;
 }
 
 .hero-particles span:nth-child(5) {
-  top: 50%;
-  left: 10%;
-  animation-delay: 1.5s;
+  top: 85%;
+  left: 50%;
 }
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -196,6 +280,58 @@ body::after {
 
   50% {
     transform: translateY(-15px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+.typewriter {
+
+  margin: 1.2rem auto;
+
+  width: 0;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border-right: 2px solid rgba(245,199,66,0.8);
+
+  color: rgba(245,241,235,0.92);
+
+  font-size: 1rem;
+
+  letter-spacing: 0.08em;
+
+}
+
+.typewriter.start {
+
+  animation:
+    typing 3s steps(28, end) forwards,
+    blink 0.8s infinite;
+}
+
+@keyframes typing {
+
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 38ch;
+  }
+}
+
+@keyframes blink {
+
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typewriterAppear {
+
+  to {
     opacity: 1;
   }
 }
@@ -448,10 +584,12 @@ body::after {
 
 .modal-image:first-child {
   transform: rotate(-6deg);
+  object-position: 17% center;
 }
 
 .modal-image:last-child {
   transform: rotate(6deg);
+  object-position: 85% 12%;
 }
 
 @keyframes emojiPulse {
@@ -616,6 +754,10 @@ body::after {
   width: 100%;
   max-width: 500px;
   height: 400px;
+}
+
+.happy-birthday {
+  font-weight: bold;
 }
 
 /* ENVELOPE STYLES */
@@ -858,6 +1000,15 @@ body::after {
   animation: none;
 }
 
+.shayari {
+  margin-top: 18px;
+  font-style: italic;
+  font-size: 0.80rem;
+  line-height: 1.8;
+  color: rgba(245, 199, 66, 0.88);
+  text-align: center;
+}
+
 .gift-photo {
   width: 100%;
   border-radius: 16px;
@@ -977,6 +1128,24 @@ body::after {
   }
 }
 
+@keyframes giftboxPulse {
+
+  0%, 100% {
+
+    filter:
+      drop-shadow(0 0 0px rgba(245,199,66,0));
+
+  }
+
+  50% {
+
+    filter:
+      drop-shadow(0 0 18px rgba(245,199,66,0.45))
+      drop-shadow(0 0 35px rgba(245,199,66,0.18));
+
+  }
+}
+
 .giftbox__body {
   position: absolute;
   width: 100%;
@@ -1005,7 +1174,7 @@ body::after {
   position: absolute;
   width: 100%;
   height: 65px;
-  top: 0;
+  top: 15px;
   background: linear-gradient(135deg, #d72850 0%, #a01538 100%);
   border-radius: 12px 12px 4px 4px;
   box-shadow: 0 20px 60px rgba(139, 21, 56, 0.4),
@@ -1184,6 +1353,14 @@ body::after {
     max-width: 100%;
   }
 
+  .hero-particles span {
+  font-size: 16px;
+}
+
+.hero-particles {
+  overflow: visible;
+}
+
   .hero__button {
     width: min(100%, 320px);
     padding: 1rem 1.25rem;
@@ -1197,6 +1374,13 @@ body::after {
     touch-action: manipulation;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0.12);
   }
+
+  .typewriter {
+
+  font-size: 0.9rem;
+
+  max-width: 90vw;
+}
 
   .secret-btn {
     bottom: 22px;
@@ -1337,7 +1521,9 @@ body::after {
   }
 
   .giftbox__wrapper {
-    animation: giftboxFloat 3.4s ease-in-out infinite;
+    animation:
+      giftboxFloat 3s ease-in-out infinite,
+      giftboxPulse 2.8s ease-in-out infinite;
   }
 
 .memory-video {
