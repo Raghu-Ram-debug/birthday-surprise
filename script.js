@@ -176,8 +176,8 @@ if (music) {
 
 }
   } else {
-    alert("Wrong !!!! Try again.");
     vibrate([80, 40, 80]);
+    alert("Wrong !!!! Try again.");
   }
 }
 

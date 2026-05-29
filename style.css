@@ -668,30 +668,6 @@ box-shadow:
   }
 }
 
-.surprise-modal__close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  width: 40px;
-  height: 40px;
-  border: none;
-  background: rgba(245, 199, 66, 0.1);
-  color: var(--muted);
-  font-size: 1.8rem;
-  cursor: pointer;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.surprise-modal__close:hover {
-  background: rgba(245, 199, 66, 0.2);
-  color: var(--accent);
-  transform: rotate(90deg);
-}
-
 /* MODAL OPEN STATE */
 .surprise-modal.open {
   opacity: 1;
