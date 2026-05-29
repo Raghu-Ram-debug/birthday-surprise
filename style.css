@@ -408,7 +408,7 @@ box-shadow:
   transition: opacity 0.3s ease;
 }
 
-.hero-button:hover {
+.hero__button:hover {
 
   transform: translateY(-3px);
 
@@ -444,7 +444,7 @@ box-shadow:
   color: rgba(245, 199, 66, 0.3);
   font-size: 1.5rem;
   cursor: pointer;
-  opacity: 0.99;
+  opacity: 100%;
   transition: all 0.3s ease;
   z-index: 100;
   backdrop-filter: blur(8px);

@@ -22,6 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* =========================
+      VIBRATION EFFECT
+  ========================= */
+
+  function vibrate(pattern = 50) {
+  if ("vibrate" in navigator) {
+    navigator.vibrate(pattern);
+  }
+}
+
+  /* =========================
    SECRET MODAL
 ========================= */
 
@@ -43,6 +53,7 @@ if (surpriseClose && surpriseModal) {
 if (secretBtn && surpriseModal) {
 
   secretBtn.addEventListener("click", () => {
+    vibrate([40, 30, 40]);
 
     surpriseModal.classList.add("open");
     createConfetti();
@@ -121,6 +132,7 @@ envelope.addEventListener("click", () => {
   if (giftbox && surprise) {
 
 giftbox.addEventListener("click", () => {
+  vibrate(120);
 
   console.log("Gift clicked");
 
@@ -165,6 +177,7 @@ if (music) {
 }
   } else {
     alert("Wrong !!!! Try again.");
+    vibrate([80, 40, 80]);
   }
 }
 
